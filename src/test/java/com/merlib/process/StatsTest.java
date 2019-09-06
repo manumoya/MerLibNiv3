@@ -7,13 +7,13 @@ import static org.junit.Assert.assertEquals;
 
 public class StatsTest {
     @Test
-    public void getConnection() {
+    public void getStats() {
 
         Estadistica stat = Stats.getStats();
 
-        assertEquals(0,stat.getHumano());
-        assertEquals(7,stat.getMutante());
-        assertEquals(1.0,stat.getRatio(),0.1);
+        assertEquals(5,stat.getMutante());
+        assertEquals(3,stat.getHumano());
+        assertEquals(1.7,stat.getRatio(),0.1);
     }
 
 }

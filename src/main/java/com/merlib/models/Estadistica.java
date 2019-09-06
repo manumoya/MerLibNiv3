@@ -2,37 +2,37 @@ package com.merlib.models;
 
 public class Estadistica {
 
-    int mutante;
-    int humano;
-    float ratio;
+    int count_mutant_dna;
+    int count_human_dna;
+    double ratio;
 
-    public Estadistica(int mutante, int humano, float ratio) {
-        this.mutante = mutante;
-        this.humano = humano;
+    public Estadistica(int mutante, int humano, double ratio) {
+        this.count_mutant_dna = mutante;
+        this.count_human_dna = humano;
         this.ratio = ratio;
     }
 
     public int getMutante() {
-        return mutante;
+        return count_mutant_dna;
     }
 
-    public void setMutante(int mutante) {
-        this.mutante = mutante;
+    public void setMutante(int count_mutant_dna) {
+        this.count_mutant_dna = count_mutant_dna;
     }
 
     public int getHumano() {
-        return humano;
+        return count_human_dna;
     }
 
-    public void setHumano(int humano) {
-        this.humano = humano;
+    public void setHumano(int count_human_dna) {
+        this.count_human_dna = count_human_dna;
     }
 
-    public float getRatio() {
+    public double getRatio() {
         return ratio;
     }
 
-    public void setRatio(float ratio) {
+    public void setRatio(double ratio) {
         this.ratio = ratio;
     }
 

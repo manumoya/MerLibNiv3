@@ -4,6 +4,7 @@ import com.merlib.dao.AdnJDBC;
 import com.merlib.models.Estadistica;
 
 import java.sql.Connection;
+import java.text.DecimalFormat;
 
 public class Stats {
 
@@ -11,16 +12,18 @@ public class Stats {
 
         AdnJDBC AdnJDBC =  new AdnJDBC();
         Connection conn = AdnJDBC.getConnection();
+        DecimalFormat df = new DecimalFormat("#.0");
 
         int mutante  = AdnJDBC.getCantidadTipo(1);
         int humano = AdnJDBC.getCantidadTipo(0);
-        float ratio =0;
+        double ratio =0;
         if (humano>0){
-            ratio = mutante/humano;
+            ratio = Double.valueOf(mutante)/Double.valueOf(humano);
         }
+        String ratioStr= df.format(ratio);
+        double ratioFinal = Double.parseDouble(ratioStr);
 
-
-        Estadistica stat = new Estadistica(mutante,humano,ratio);
+        Estadistica stat = new Estadistica(mutante,humano,ratioFinal);
         return stat;
     }
 
