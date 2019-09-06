@@ -2,6 +2,7 @@ package com.merlib.services;
 
 import com.merlib.models.Respuesta;
 import com.merlib.process.Mutant;
+import com.merlib.process.Stats;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import javax.ws.rs.Consumes;
@@ -37,6 +38,8 @@ public class Mutante {
             }
             isMutant = Mutant.isMutant(arr);
             resp = new Respuesta(isMutant);
+
+            Stats.insStats(arr, isMutant);
 
             if (isMutant){
                 return Response.ok(resp).build();
