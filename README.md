@@ -73,6 +73,14 @@ Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
 Las arquitectura del sistema es:
 
+![](img/diag_sol.png)
+
+### Escalabilidad
+
+Las arquitectura del sistema es:
+
+![](img/diag_sol..png)
+
 
 ### Tecnología utilizada
 * java 7.*
