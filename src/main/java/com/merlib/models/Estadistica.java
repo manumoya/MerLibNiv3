@@ -6,9 +6,9 @@ public class Estadistica {
     int count_human_dna;
     double ratio;
 
-    public Estadistica(int mutante, int humano, double ratio) {
-        this.count_mutant_dna = mutante;
-        this.count_human_dna = humano;
+    public Estadistica(int count_mutant_dna, int count_human_dna, double ratio) {
+        this.count_mutant_dna = count_mutant_dna;
+        this.count_human_dna = count_human_dna;
         this.ratio = ratio;
     }
 
