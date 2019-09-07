@@ -75,7 +75,7 @@ Las arquitectura del sistema de un servidor es el siguiente:
 
 ![](img/diag_sol.png)
 
-##### Escalabilidad
+#### Escalabilidad
 
 Las arquitectura del sistema es:
 
@@ -116,7 +116,7 @@ Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
 
 * La url de la API es: [merlibniv2app2.azurewebsites.net](https://merlibniv2app2.azurewebsites.net/)
 
-##### API /api/mutant/
+#### API /api/mutant/
 
 * API Método: 
 		
@@ -143,7 +143,7 @@ Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
 		
 * Header debe ser configurado con Content-Type = application/json
 
-##### API /api/stats/
+#### API /api/stats/
 
 * API Método: 
 		
