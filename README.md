@@ -46,18 +46,18 @@ El programa considera los siguientes Packages
 Los programas son los siguientes:
 
 * **com.merlib.dao**: 
-	* AdnJDBC.java
-* **com.merlib.models**: 
-	* Estadistica.java
-	* Persona.java
-	* Respuesta.java
-* **com.merlib.process**: 
-	* Mutant.java
-	* Stats.java
-* **com.merlib.services**: 
-	* Mutante.java
-	* StatApi.java
+	* [AdnJDBC.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/dao/AdnJDBC.java) 
 	
+* **com.merlib.models**: 
+	* [Estadistica.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/models/Estadistica.java) 
+	* [Persona.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/models/Persona.java)
+	* [Respuesta.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/models/Respuesta.java)
+* **com.merlib.process**: 
+	* [Mutant.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/process/Mutant.java)
+	* [Stats.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/process/Stats.java)
+* **com.merlib.services**: 
+	* [Mutante.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/services/Mutante.java)
+	* [StatApi.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/main/java/com/merlib/services/StatApi.java)
 
 ### Pruebas automáticas
 
