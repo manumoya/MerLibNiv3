@@ -11,9 +11,9 @@ public class StatsTest {
 
         Estadistica stat = Stats.getStats();
 
-        assertEquals(5,stat.getMutante());
-        assertEquals(3,stat.getHumano());
-        assertEquals(1.7,stat.getRatio(),0.1);
+        assertEquals(6,stat.getMutante());
+        assertEquals(4,stat.getHumano());
+        assertEquals(1.5,stat.getRatio(),0.1);
     }
 
     @Test
