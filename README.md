@@ -73,14 +73,12 @@ Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
 Las arquitectura del sistema de un servidor es el siguiente:
 
-<p align="center">
 ![](img/diag_sol.png)
 
 ##### Escalabilidad
 
 Las arquitectura del sistema es:
 
-<p align="center">
 ![](img/diag_sol_esc.png)
 
 
