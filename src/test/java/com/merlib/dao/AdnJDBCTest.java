@@ -45,7 +45,8 @@ public class AdnJDBCTest {
     public void insertEstadistica(){
         AdnJDBC AdnJDBC =  new AdnJDBC();
         Connection conn = AdnJDBC.getConnection();
-        String adn="ATGAAA-AGAAAG-CAGATG-ACATGA-CCTGCC-TTGATA";
+        //String adn="ATGAAA-AGAAAG-CAGATG-ACATGA-CCTGCC-TTGATA";
+        String adn ="ATAG-AGGC-ATGT-CGAA";
 
         Persona per = new Persona(adn,1);
 
