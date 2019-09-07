@@ -14,7 +14,7 @@ public class Stats {
 
         int mutante  = AdnJDBC.getCantidadTipo(1);
         int humano = AdnJDBC.getCantidadTipo(0);
-        float ratio =1;
+        float ratio =0;
         if (humano>0){
             ratio = mutante/humano;
         }
