@@ -77,7 +77,7 @@ Las arquitectura del sistema de un servidor es el siguiente:
 
 #### Escalabilidad
 
-Las arquitectura del sistema es:
+Si las necesidas son escalar la solución se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer (ej: nxing, ILB, etc..) y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance se determina qu cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar almenos 1.000 instancias balanceadas.
 
 ![](img/diag_sol_esc.png)
 
@@ -110,11 +110,12 @@ Los casos probados fueron los mismos casos de Nivel 2. Algunas de las trazas:
 
 ### ¿Se puede mejorar?
 
-Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
+* Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
+* Implementando 
 
 ### Ejecución del programa
 
-* La url de la API es: [merlibniv2app2.azurewebsites.net](https://merlibniv2app2.azurewebsites.net/)
+* La url de la API es: [https://merlibniv3.azurewebsites.net](https://merlibniv3.azurewebsites.net/). Se debe considerar que la aplicación está en una instancia de desarrollo con cuenta Azure estudiante, por lo que la solución no escala.
 
 #### API /api/mutant/
 
