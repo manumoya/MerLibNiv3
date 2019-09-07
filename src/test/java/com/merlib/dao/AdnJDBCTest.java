@@ -1,5 +1,6 @@
 package com.merlib.dao;
 
+import com.merlib.models.Persona;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -26,13 +27,43 @@ public class AdnJDBCTest {
 
     @Test
     public void closeConnection(){
+        ;
+    }
+
+    @Test
+    public void getCantidadTipo(){
         AdnJDBC AdnJDBC =  new AdnJDBC();
         Connection conn = AdnJDBC.getConnection();
+
+        assertEquals(6,AdnJDBC.getCantidadTipo(1));
+        assertEquals(0,AdnJDBC.getCantidadTipo(0));
+
+       AdnJDBC.closeConnection();
+    }
+
+    @Test
+    public void insertEstadistica(){
+        AdnJDBC AdnJDBC =  new AdnJDBC();
+        Connection conn = AdnJDBC.getConnection();
+        String adn="ATGAAA-AGAAAG-CAGATG-ACATGA-CCTGCC-TTGATA";
+
+        Persona per = new Persona(adn,1);
+
+        assertEquals(true,AdnJDBC.insertEstadistica(per));
+
         AdnJDBC.closeConnection();
-        assertNotNull(conn);
+    }
 
 
+    @Test
+    public void getCantidadEstadistica(){
+        String adn="ATGAAA-AGAAAG-CAGATG-ACATGA-CCTGCC-TTGATA";
+        AdnJDBC AdnJDBC =  new AdnJDBC();
+        Connection conn = AdnJDBC.getConnection();
 
+        assertEquals(4,AdnJDBC.getCantidadEstadistica(adn));
+
+        AdnJDBC.closeConnection();
     }
 
 }

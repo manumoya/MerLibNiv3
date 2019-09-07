@@ -1,8 +1,8 @@
 package com.merlib.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import com.merlib.models.Persona;
+
+import java.sql.*;
 
 public class AdnJDBC {
 
@@ -35,5 +35,68 @@ public class AdnJDBC {
             //do nothing
         }
     }
+
+    public int getCantidadTipo(int tipo) {
+        // List<Person> persons = new LinkedList<Person>();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select count(tipo) 'total'  from stadistic where tipo = " + tipo);
+
+            int total = 0;
+            if(resultSet.next()){
+                total = resultSet.getInt("total");
+            }
+
+            resultSet.close();
+            statement.close();
+            return  total;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    public boolean insertEstadistica(Persona persona) {
+        boolean resp = false;
+
+        try {
+            String sql ="insert into stadistic (adn, tipo)  " +
+                        "values ('"+ persona.getAdn() +"',"+ persona.getTipo() +")";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            //preparedStatement.setString(1,  person.getName());
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            resp = true;
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return resp;
+    }
+
+
+    public int getCantidadEstadistica(String adn) {
+        // List<Person> persons = new LinkedList<Person>();
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select count(tipo) 'total'  from stadistic " +
+                                                              "where adn = '" + adn +"'");
+
+            int total = 0;
+            if(resultSet.next()){
+                total = resultSet.getInt("total");
+            }
+
+            resultSet.close();
+            statement.close();
+            return  total;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
 
 }
