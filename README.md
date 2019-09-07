@@ -26,7 +26,7 @@ El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nive
 
 ### Idea principal
 
-* Tomar la API [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/) y agregarle una Api para estadisticas.
+* Tomar la solución [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/) y agregar la Api para estadisticas.
 * Usar base de datos MySql (servicio Azure).
 * Crear DAO y procesos relacionados para que inserte y obtenga estadisticas.
 * Explicar la forma de escalar la API.
@@ -77,11 +77,22 @@ Las arquitectura del sistema de un servidor es el siguiente:
 
 #### Escalabilidad
 
-Si las necesidas son escalar la solución se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer (ej: nxing, ILB, etc..) y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance se determina qu cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar almenos 1.000 instancias balanceadas.
+Si las necesidas son escalar la solución se debe considerar la siguiente arquitectura, donde se debe configurar por ejememplo, un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance  determina qu cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
 
 ![](img/diag_sol_esc.png)
 
+### Traza
+Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Algunas de las trazas:
 
+|Caso 1 = true | Caso 4 = true |
+|---|---|
+| ![](img/traza_caso1.png) | ![](img/traza_caso4.png) | 
+| Caso 10 = false | Caso 11 = false |  
+|![](img/traza_caso10.png) | ![](img/traza_caso11.png) |
+|Caso 13 = true | Caso 16 = true | 
+|![](img/traza_caso13.png) | ![](img/traza_caso16.png) | 
+
+ 
 ### Tecnología utilizada
 * java 7.*
 * Jersey 2.* (api framework)
@@ -96,22 +107,10 @@ Si las necesidas son escalar la solución se debe considerar la siguiente arquit
 * BD MySql
 * MAC OS X 	
 
-### Traza
-Los casos probados fueron los mismos casos de Nivel 2. Algunas de las trazas:
-
-|Caso 1 = true | Caso 4 = true |
-|---|---|
-| ![](img/traza_caso1.png) | ![](img/traza_caso4.png) | 
-| Caso 10 = false | Caso 11 = false |  
-|![](img/traza_caso10.png) | ![](img/traza_caso11.png) |
-|Caso 13 = true | Caso 16 = true | 
-|![](img/traza_caso13.png) | ![](img/traza_caso16.png) | 
- 
-
 ### ¿Se puede mejorar?
 
 * Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
-* Implementando 
+* Implementando la escalanbilidad correspondiente.
 
 ### Ejecución del programa
 
