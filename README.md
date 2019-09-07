@@ -1,6 +1,6 @@
 # Ejercicio Mer. Lib. Nivel 3 (Agosto 2019)
 ###### Autor: [Manuel Moya - mmoyam@gmail.com]
-El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nivel 3, donde se debe crear una api y desplegarlo en un servicio Cloud. Esto basado en el algortimo que detecta mutantes basados su secuencia de ADN del ejercicio anterior [(Nivel 1)](https://github.com/manumoya/MerLibNiv1/) y en la API /mutant/ publicada en [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/).
+El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nivel 3, donde se debe crear una API y desplegarlo en un servicio Cloud. Esto basado en el algortimo que detecta mutantes basados su secuencia de ADN del ejercicio anterior [(Nivel 1)](https://github.com/manumoya/MerLibNiv1/) y en la API /mutant/ publicada en [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/).
 
 ### Enunciado
 
