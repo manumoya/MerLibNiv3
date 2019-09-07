@@ -71,15 +71,17 @@ Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
 ### Arquitectura del sistema
 
-Las arquitectura del sistema es:
+Las arquitectura del sistema de un servidor es el siguiente:
 
+<p align="center">
 ![](img/diag_sol.png)
 
-### Escalabilidad
+##### Escalabilidad
 
 Las arquitectura del sistema es:
 
-![](img/diag_sol..png)
+<p align="center">
+![](img/diag_sol_esc.png)
 
 
 ### Tecnología utilizada
@@ -110,7 +112,7 @@ Los casos probados fueron los mismos casos de Nivel 2. Algunas de las trazas:
 
 ### ¿Se puede mejorar?
 
-Se puede mejorar agregando persistencia como MyBatis o Hibernate.
+Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
 
 ### Ejecución del programa
 
