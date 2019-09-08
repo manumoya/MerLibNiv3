@@ -1,6 +1,6 @@
 # Ejercicio Mer. Lib. Nivel 3 (Agosto 2019)
 ###### Autor: [Manuel Moya - mmoyam@gmail.com]
-El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nivel 3, donde se debe crear una API y desplegarlo en un servicio Cloud. Esto basado en el algortimo que detecta mutantes basados su secuencia de ADN del ejercicio anterior [(Nivel 1)](https://github.com/manumoya/MerLibNiv1/) y en la API /mutant/ publicada en [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/).
+El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nivel 3, donde se debe agregar un API de estdísticas y desplegarlo en un servicio Cloud. Esto basado en el algortimo que detecta mutantes basados su secuencia de ADN del ejercicio anterior [(Nivel 1)](https://github.com/manumoya/MerLibNiv1/) y en la API /mutant/ publicada en [(Nivel 2)](https://github.com/manumoya/MerLibNiv2/).
 
 ### Enunciado
 
@@ -36,7 +36,7 @@ El objetivo de este documento es detallar la resolución del caso Mer. Lib. Nive
 
 ### Descripción del programa
 
-El programa considera los siguientes Packages
+El programa considera los siguientes Packages:
 
 * **com.merlib.dao**: Contiene los programas que harán el acceso a la BD.
 * **com.merlib.models**: Contiene los java beans utilizados.
@@ -61,7 +61,7 @@ Los programas son los siguientes:
 
 ### Pruebas automáticas
 
-Las pruebas unitarias que cubren son:
+Las pruebas unitarias que cubren los casos son:
  
 * [MutantTest.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/test/java/com/merlib/process/MutantTest.java).
 * [AdnJDBCTest.java](https://github.com/manumoya/MerLibNiv3/tree/master/src/test/java/com/merlib/dao/AdnJDBCTest.java).
@@ -70,7 +70,7 @@ Las pruebas unitarias que cubren son:
 Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
 #### Traza
-Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Traza de estadísticas.
+Los casos probados fueron los mismos casos de [Nivel 1](https://github.com/manumoya/MerLibNiv1/) y [Nivel 2](https://github.com/manumoya/MerLibNiv2/). La traza de la estadística es:
 
 |Caso 1  |
 |---|
@@ -84,13 +84,15 @@ A continuación se puede ver el diagrama de secuencia de la solución:
 
 ### Arquitectura del sistema
 
-Las arquitectura del sistema de una instanciaa es el siguiente, se debe considerar que la aplicación y la BD están en maquinas diferentes:
+Las arquitectura del sistema de una instancia es el siguiente:
+
+Obs: se debe considerar que la aplicación y la BD están en maquinas diferentes:
 
 ![](img/diag_sol.png)
 
 #### Escalabilidad
 
-Si la necesidad es escalar la solución, se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance se determina que cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
+Si la necesidad es escalar la solución, se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo: si con la herramienta de performance se determina que cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
 
 ![](img/diag_sol_esc.png)
 
@@ -117,7 +119,7 @@ Si la necesidad es escalar la solución, se debe considerar la siguiente arquite
 
 ### Ejecución del programa
 
-* La url de la API es: [https://merlibniv3.azurewebsites.net](https://merlibniv3.azurewebsites.net/). Se debe considerar que la aplicación está en una instancia de desarrollo con cuenta Azure estudiante, por lo que la solución no escala.
+* La url de la API es: [https://merlibniv3.azurewebsites.net](https://merlibniv3.azurewebsites.net/). Considerar que la aplicación está en una instancia de desarrollo con cuenta Azure estudiante, por lo que la solución no escala.
 
 #### API /api/mutant/
 
