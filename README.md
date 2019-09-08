@@ -77,26 +77,24 @@ A continuación se puede ver el diagrama de secuencia de la solución:
 
 ### Arquitectura del sistema
 
-Las arquitectura del sistema de un servidor es el siguiente:
+Las arquitectura del sistema de una instanciaa es el siguiente, se debe considerar que la aplicación y la BD están en maquinas diferentes:
 
 ![](img/diag_sol.png)
 
 #### Escalabilidad
 
-Si las necesidas son escalar la solución se debe considerar la siguiente arquitectura, donde se debe configurar por ejememplo, un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance  determina qu cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
+Si la necesidad es escalar la solución, se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance se determina que cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
 
 ![](img/diag_sol_esc.png)
 
 ### Traza
-Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Algunas de las trazas:
+Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Traza de estadísticas.
 
-|Caso 1 = true | Caso 4 = true |
-|---|---|
-| ![](img/traza_caso1.png) | ![](img/traza_caso4.png) | 
-| Caso 10 = false | Caso 11 = false |  
-|![](img/traza_caso10.png) | ![](img/traza_caso11.png) |
-|Caso 13 = true | Caso 16 = true | 
-|![](img/traza_caso13.png) | ![](img/traza_caso16.png) | 
+|Caso 1  |
+|---|
+| ![](img/traza1.png) |  
+
+También se utilizo jmeter para su análisis.
 
  
 ### Tecnología utilizada
@@ -115,7 +113,8 @@ Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Algunas de las 
 
 ### ¿Se puede mejorar?
 
-* Se puede mejorar agregando persistencia BD como MyBatis o Hibernate.
+* Sí, agregando persistencia de BD como Hibernate.
+* Agregando una BD (NoSql) en cluster
 * Implementando la escalanbilidad correspondiente.
 
 ### Ejecución del programa
