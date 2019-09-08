@@ -69,6 +69,13 @@ Las pruebas unitarias que cubren son:
 
 Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
+#### Traza
+Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Traza de estadísticas.
+
+|Caso 1  |
+|---|
+| ![](img/traza1.png) |  
+
 ### Diagrama de secuencia
 
 A continuación se puede ver el diagrama de secuencia de la solución:
@@ -86,15 +93,6 @@ Las arquitectura del sistema de una instanciaa es el siguiente, se debe consider
 Si la necesidad es escalar la solución, se debe considerar la siguiente arquitectura, donde se debe configurar un load balancer y configurar las instancias de servidor de aplicación y BD necesarias. Por ejemplo, si con la herramienta de performance se determina que cada servidor responde 1.000 req/seg, para responder 1 millón, se necesitan configurar al menos 1.000 instancias balanceadas.
 
 ![](img/diag_sol_esc.png)
-
-### Traza
-Los casos probados fueron los mismos casos de Nivel 1 y Nivel 2. Traza de estadísticas.
-
-|Caso 1  |
-|---|
-| ![](img/traza1.png) |  
-
-También se utilizo jmeter para su análisis.
 
  
 ### Tecnología utilizada
@@ -114,8 +112,8 @@ También se utilizo jmeter para su análisis.
 ### ¿Se puede mejorar?
 
 * Sí, agregando persistencia de BD como Hibernate.
-* Agregando una BD (NoSql) en cluster
 * Implementando la escalanbilidad correspondiente.
+* Agregando un cluster de BD
 
 ### Ejecución del programa
 
