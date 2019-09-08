@@ -69,6 +69,12 @@ Las pruebas unitarias que cubren son:
 
 Adicionalmente, las API se probaron directamente con Postman y Jmeter.
 
+### Diagrama de secuencia
+
+A continuación se puede ver el diagrama de secuencia de la solución:
+
+![](img/diag_sec.png)
+
 ### Arquitectura del sistema
 
 Las arquitectura del sistema de un servidor es el siguiente:
